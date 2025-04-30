@@ -1,5 +1,5 @@
-# astro_gallery
-A photo gallery made with Astro
+Deployed to https://what-it-izz.github.io/astro_gallery/
+# A photo gallery made with Astro
 =======
 # Astro Starter Kit: Basics
 
