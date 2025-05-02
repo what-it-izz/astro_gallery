@@ -1,6 +1,8 @@
 ---
 import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro'
+import Footer from '../components/Footer.astro'
+import Sidebar from '../components/Sidebar.astro'
 import '../styles/gallery.css';
 
 const pageTitle =  'Gallery'
@@ -14,5 +16,11 @@ const pageTitle =  'Gallery'
     </head>
     <body>
 		<Welcome />
+		<Navbar />
+		<Sidebar />
+		<main>
+			<h1>Main content</h1>
+		</main>
+		<Footer />
     </body>
 </html>
