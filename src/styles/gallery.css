@@ -46,9 +46,18 @@ footer {
     display: none;
   }
 
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; /* spacing between images */
+    justify-content: center; /* center images on wide screens */
+}
+
 @media(max-width: 800px) {
     body {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
     }
 
     aside {
@@ -62,6 +71,10 @@ footer {
         transition: transform 0.3s ease;
         z-index: 1000;
     }
+
+    main {
+        flex: 1; /* Pushes footer to the bottom */
+      }
 
     aside.show {
         transform: translateX(0);

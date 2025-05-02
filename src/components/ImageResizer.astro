@@ -1,0 +1,49 @@
+---
+import { Image } from "astro:assets";
+
+const {
+  src,
+  alt,
+  aspectRatio = 1,
+  format = 'webp',
+  loading = 'lazy',
+  className = '',
+} = Astro.props;
+
+// This width just tells Astro how to generate the images; it doesn't control display size
+const baseWidth = 1920;
+const baseHeight = Math.round(baseWidth / aspectRatio);
+---
+
+<style>
+  .responsive-image-wrapper {
+    flex: 1 1 300px; /* grow and shrink, base width ~300px */
+    width: 100%;
+    max-width: 800px; /* Limit how big the image can get */
+    aspect-ratio: var(--aspect-ratio);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .responsive-image-wrapper img {
+    width: 100%;
+    height: 110%;
+    object-fit: contain;
+    display: block;
+  }
+</style>
+
+<div
+  class={`responsive-image-wrapper ${className}`}
+  style={`--aspect-ratio: ${aspectRatio}`}
+>
+  <Image
+    src={src}
+    alt={alt}
+    width={baseWidth}
+    height={baseHeight}
+    format={format}
+    sizes="100vw"
+    loading={loading}
+  />
+</div>
