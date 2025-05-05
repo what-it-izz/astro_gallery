@@ -32,6 +32,30 @@ aside {
     grid-area: sidebar;
     background-color: rgba(255, 240, 245, 0.433);
 }
+
+aside a {
+    display: block;
+    color: #6c008d;
+    text-decoration: none;
+    padding: 2em;
+    font-weight: bold;
+}
+
+.boxed {
+    box-shadow: rgba(140, 52, 143, 0.09) 0px 3px 12px;
+}
+
+.boxed:hover {
+    background: #fff0fa;
+    transform: scale(1.02); /* slightly zoom in */
+    box-shadow: 
+      rgba(240, 46, 170, 0.4) 5px 5px,
+      rgba(240, 46, 170, 0.3) 10px 10px,
+      rgba(240, 46, 170, 0.2) 15px 15px,
+      rgba(240, 46, 170, 0.1) 20px 20px,
+      rgba(240, 46, 170, 0.05) 25px 25px;
+}
+
 main {
     grid-area: main;
 }
@@ -39,7 +63,7 @@ footer {
     grid-area: footer;
     background: palevioletred;
     color: white;
-    padding: 2em;
+    padding: 1em;
 }
 
 #toggleSidebarBtn {
@@ -50,6 +74,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem; /* spacing between images */
+    padding: 2em;
     justify-content: center; /* center images on wide screens */
 }
 
