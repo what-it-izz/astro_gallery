@@ -34,11 +34,27 @@ aside {
 }
 
 aside a {
+    font-family: "Dangrek", sans-serif;
     display: block;
     color: #6c008d;
     text-decoration: none;
     padding: 2em;
     font-weight: bold;
+}
+
+#homepage {
+    /* justify-content: center; */
+    font-family: "Dangrek", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #8d0073;
+}
+
+#homepage a {
+    color: #1f008d;
 }
 
 .boxed {
